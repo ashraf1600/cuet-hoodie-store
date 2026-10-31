@@ -1,0 +1,240 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0B0A09;
+  --color-ink-2: #14110F;
+  --color-ink-3: #1D1A17;
+  --color-line: #3A342E;
+  --color-paper: #F2EDE4;
+  --color-paper-2: #E6E2DA;
+  --color-muted: #B9B2A6;
+  --color-muted-dark: #635C53;
+  --color-brick: #A4471F;
+  --color-brick-bright: #E07A47;
+  --color-beige: #E6E2DA;
+
+  --font-anton: 'Anton', sans-serif;
+  --font-body: 'Manrope', 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* Streetwear Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.8125rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border: 1px solid var(--color-paper);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brick-bright);
+  color: #ffffff;
+  border-color: var(--color-brick-bright);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--color-paper);
+  border: 1px solid var(--color-paper);
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.8125rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-brick-bright);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.8125rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border: 1px solid var(--color-brick-bright);
+}
+
+.btn-accent:hover {
+  background-color: #ffffff;
+  color: var(--color-ink);
+  border-color: #ffffff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes kenburns {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+.hero-kenburns {
+  animation: kenburns 12s ease-in-out infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0A09;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3A342E;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E07A47;
+}
+
+/* Print Stylesheet for Official Receipt Voucher */
+@media print {
+  @page {
+    margin: 12mm;
+    size: auto;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  .print-receipt-voucher {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    border: 2px solid #111827 !important;
+    box-shadow: none !important;
+    padding: 1.5rem !important;
+    margin: 0 auto !important;
+    max-width: 100% !important;
+  }
+
+  .print-receipt-voucher * {
+    color: #111827 !important;
+    border-color: #d1d5db !important;
+    background-color: transparent !important;
+  }
+
+  .print-receipt-voucher .print-accent {
+    color: #000000 !important;
+    font-weight: 800 !important;
+  }
+
+  .print-receipt-voucher .print-border-strong {
+    border-color: #000000 !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+}
+
+.print-only {
+  display: none;
+}
+
+/* ─── Cutout photography: transparent figures lit on the black page ─── */
+.cutout-glow {
+  position: absolute;
+  inset: 4% 6% 10%;
+  z-index: -1;
+  background:
+    radial-gradient(closest-side, rgba(224, 122, 71, 0.16), rgba(224, 122, 71, 0.05) 55%, transparent 100%),
+    radial-gradient(closest-side at 50% 35%, rgba(242, 237, 228, 0.07), transparent 70%);
+  filter: blur(8px);
+}
+
+.cutout-floor {
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: -1.5%;
+  height: 7%;
+  z-index: -1;
+  background: radial-gradient(closest-side, rgba(0, 0, 0, 0.85), transparent);
+  filter: blur(6px);
+}
+
+.cutout-img {
+  /* faint warm rim keeps black fabric readable against black */
+  filter: drop-shadow(0 0 1px rgba(242, 237, 228, 0.18)) drop-shadow(0 24px 40px rgba(0, 0, 0, 0.55));
+  user-select: none;
+}
+
+.cutout-fade {
+  -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-rise {
+  opacity: 0;
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise, .animate-fade-in, .hero-kenburns { animation: none; opacity: 1; }
+}
