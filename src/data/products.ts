@@ -12,7 +12,7 @@ export const SIZE_CHART = [
 
 export const getSizeInfo = (size: string) => SIZE_CHART.find(s => s.size === size);
 /** Batches that can be printed on the back. */
-export const BATCHES = ["CUET'21", "CUET'22", "CUET'23", "CUET'24", "CUET'25"];
+export const BATCHES = ["CUET'18", "CUET'19", "CUET'20", "CUET'21", "CUET'22", "CUET'23", "CUET'24", "CUET'25"];
 const FABRIC = '300+ GSM heavyweight cotton fleece · DTF print · double-layer hood · ribbed cuffs and hem · unisex fit';
 
 /** Colours offered for both designs, with swatch fills for the colour picker. */

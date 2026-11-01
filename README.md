@@ -1,4 +1,4 @@
-# CUET Hoodie Store — Premium University Merchandise
+# 2Stitch — CUET Hoodie Store
 
 A complete, modern, premium-looking, frontend-only e-commerce website for CUET-themed hoodie merchandise. Built for CUET students and alumni to explore collections, inspect product details, select hoodie variations, and place orders with sequential order numbering, LocalStorage archiving, CSV reporting, and centralized Google Form integration.
 
@@ -41,8 +41,8 @@ Featuring two signature CUET campus designs:
 
 | Design | Colours | Sizes | Batch (printed on back) | Price |
 |---|---|---|---|---|
-| 01 · The Gateway | Black, Camel, Maroon | M, L, XL, XXL | CUET'21 – CUET'25 | ৳700 |
-| 02 · Bus Stories | Black, Camel, Maroon | M, L, XL, XXL | CUET'21 – CUET'25 | ৳700 |
+| 01 · The Gateway | Black, Camel, Maroon | M, L, XL, XXL | CUET'18 – CUET'25 | ৳700 |
+| 02 · Bus Stories | Black, Camel, Maroon | M, L, XL, XXL | CUET'18 – CUET'25 | ৳700 |
 
 Products, colours and image lists live in `src/data/products.ts`.
 

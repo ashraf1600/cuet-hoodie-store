@@ -19,7 +19,7 @@ export const Navbar: React.FC = () => {
         {/* Brand Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <span className="font-anton text-2xl sm:text-3xl uppercase tracking-wider text-paper group-hover:text-brick-bright transition-colors">
-            BRICK <span className="text-brick-bright">&amp;</span> BOLT
+            2STITCH
           </span>
           <span className="hidden sm:inline-block font-body text-[10px] uppercase font-bold tracking-[0.25em] text-muted-dark border-l border-line pl-2 ml-1">
             CUET MERCH

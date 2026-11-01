@@ -103,7 +103,7 @@ export const Confirmation: React.FC = () => {
         {/* Printable Official Header (Shows cleanly when printed) */}
         <div className="print-only pb-4 mb-4 border-b-2 print-border-strong text-center space-y-1">
           <div className="font-anton text-2xl uppercase tracking-wider text-black">
-            BRICK &amp; BOLT — CUET CAMPUS MERCHANDISE
+            2STITCH — CUET CAMPUS MERCHANDISE
           </div>
           <div className="font-body text-xs text-gray-700 uppercase tracking-widest">
             Chittagong University of Engineering &amp; Technology · Official Pre-Order Voucher

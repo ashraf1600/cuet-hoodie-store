@@ -59,7 +59,7 @@ export const Home: React.FC = () => {
         <div className={`${container} grid grid-cols-1 lg:grid-cols-12 items-end gap-10`}>
           <div className="lg:col-span-5 space-y-5 lg:pb-24">
             <p className={kicker}>Your batch, your back</p>
-            <h2 className={title}>CUET’21<br />to CUET’25.</h2>
+            <h2 className={title}>CUET’18<br />to CUET’25.</h2>
             <p className="font-body text-base text-muted max-w-md leading-relaxed">
               Choose your batch at checkout and it’s printed across the back — the front carries the design, the back carries your year.
             </p>

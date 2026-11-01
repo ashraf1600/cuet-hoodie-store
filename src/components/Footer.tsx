@@ -54,8 +54,9 @@ export const Footer: React.FC = () => {
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-14 grid grid-cols-1 md:grid-cols-12 gap-10">
         <div className="md:col-span-5 space-y-4">
           <span className="font-anton text-3xl uppercase tracking-wider text-paper">
-            BRICK <span className="text-brick-bright">&amp;</span> BOLT
+            2STITCH
           </span>
+          <p className="font-body text-xs uppercase tracking-[0.24em] text-brick-bright -mt-2">Stitched with purpose.</p>
           <p className="font-body text-sm leading-relaxed text-muted max-w-sm">
             Premium university streetwear merchandise inspired by CUET&apos;s campus identity, engineering culture, and student community. Built for students, alumni, and campus life.
           </p>
@@ -115,7 +116,7 @@ export const Footer: React.FC = () => {
 
       {/* Copyright */}
       <div className="border-t border-line/40 py-6 text-center font-body text-xs text-muted-dark">
-        &copy; {new Date().getFullYear()} Brick &amp; Bolt. CUET Campus Merchandise. All rights reserved.
+        &copy; {new Date().getFullYear()} 2Stitch · Stitched with purpose. CUET Campus Merchandise. All rights reserved.
       </div>
     </footer>
   );

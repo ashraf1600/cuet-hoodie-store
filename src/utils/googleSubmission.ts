@@ -85,6 +85,7 @@ const submitToSheet = async (order: Order): Promise<SubmissionResult> => {
     return { status: 'failed', method: 'sheet', detail: data?.error || `HTTP ${res.status}` };
   } catch (err) {
     // Some browsers/extensions block reading the reply. Fall back to a fire-and-forget send.
+    console.warn('[orders] Could not read the Google Sheet reply. If orders are missing from the Sheet, check the Apps Script deployment: Web app, Execute as Me, Who has access: Anyone.', err);
     try {
       await withTimeout(url, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body });
       return { status: 'sent', method: 'sheet' };
